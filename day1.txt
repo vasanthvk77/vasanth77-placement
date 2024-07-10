@@ -1,0 +1,144 @@
+1.Fibonacci series until limit
+
+#include<stdio.h>
+void main()
+{
+    int limit,t1=0,t2=1,t3;
+    scanf("%d",&limit);
+    printf("%d %d",t1,t2);
+    for(int i=0;i<limit-2;i++)
+    {
+        t3=t1+t2;
+        printf(" %d",t3);
+        t1=t2;
+        t2=t3;
+    }
+}
+___________________________________________________________________________________________________________
+2.N'th digit in Fibonacci series
+
+#include<stdio.h>
+void main()
+{
+    int limit,t1=0,t2=1,t3;
+    scanf("%d",&limit);
+    for(int i=0;i<limit-2;i++)
+    {
+        t3=t1+t2;
+        t1=t2;
+        t2=t3;
+    }
+    printf("%d",t2);
+}
+____________________________________________________________________________________________________________________
+3.Sum of Fibonacci series
+
+#include<stdio.h>
+void main()
+{
+    int limit,t1=0,t2=1,t3,t4=0;
+    scanf("%d",&limit);
+    for(int i=0;i<=limit-2;i++)
+    {
+        t3=t1+t2;
+        t4+=t2;
+        t1=t2;
+        t2=t3;
+    }
+    printf("%d",t4);
+}
+_________________________________________________________________________________________________________________________
+4.armstrong number
+
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+    int num,temp,temp1,digit=0,count=0,result;
+    printf("enter the number:");
+    scanf("%d",&num);
+    temp=num;
+    temp1=temp;
+    while(num>0)
+    {
+        num=num/10;
+        count++;
+    }
+    for(int i=0;i<count;i++)
+    {
+        digit=temp%10;
+        result+=pow(digit,count);
+        temp=temp/10;
+    }
+    if(result==temp1)
+    printf("the number is armstrong");
+    else
+    printf("the number is not armstrong");
+}
+------------------------------------------------------------------------------------------------------------
+5.) polindrome
+
+#include <stdio.h>
+    int main()
+{
+  int n,temp,rev;
+  scanf("%d",&n);
+  temp=n;
+  rev=0;
+  while(n>0){
+      int temp1=n%10;
+      rev=rev*10+temp1;
+      n=n/10;
+  }
+  if(rev==temp){
+        printf("Palindrome");
+  }
+  else{
+      printf("Not a Palindrome");
+  }
+  return 0;
+ }
+----------------------------------------------------------------------------------------
+6.)primenumber
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+
+  int main()
+{
+  int n ,flag;
+  scanf("%d",&n);
+  flag=0;
+  for(int i=1;i<=n;i++){
+     if(n%i==0){
+         flag++;
+     } 
+  }
+  if(flag==2){
+      printf("It is a Prime");
+  }
+  else{
+     printf("It is not a Prime");
+
+  }
+ 
+  return 0;
+ }
+------------------------------------------------------------------------
+7.)factorial
+int main()
+{
+  int n ,sum;
+  scanf("%d",&n);
+  sum=1;
+  for(int i=0;i<n;i++){
+     sum*= (n-i);
+  }
+  printf("%d",sum);
+}
+
+
+
+
+
