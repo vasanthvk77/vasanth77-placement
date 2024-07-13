@@ -1,0 +1,608 @@
+1.) array reverse :::::::::::::::::::::::::::::
+
+#include<stdio.h>
+int main()
+{
+ int a[10],n,i;
+ scanf("%d",&n);
+ printf("/////////////////////////////\n");
+ for(i=0;i<n;i++)
+ {
+    scanf("%d",&a[i]);
+ }
+ printf("////////////////////////////\n");
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+  printf("////////////////////////////\n");
+ for(i=n-1;i>=0;i--)
+ printf("%d \n",a[i]);
+ return 0;
+}
+
+--------------------------------------------------------------------------------------------------------------
+
+2.) 0's and 1's ::::::::::::::::::::::
+
+#include<stdio.h>
+int main()
+{
+ int n,i,acount=0,bcount=0;
+ scanf("%d",&n);
+ int a[n];
+ printf("/////////////////////////////\n");
+ for(i=0;i<n;i++)
+ {
+    scanf("%d",&a[i]);
+ }
+ printf("////////////////////////////\n");
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+  printf("////////////////////////////\n");
+ for(i=0;i<n;i++)
+ if(a[i]==1)
+ {
+     acount++;
+ }
+ else if(a[i]==0)
+ {
+     bcount++;
+ }
+ printf("%d 1's \n",acount);
+ printf("%d 0's \n",bcount);
+ 
+ return 0;
+}
+----------------------------------------------------------------------------------------------------
+3.)
+#include<stdio.h>
+int main()
+{
+ int n,i,acount=0,bcount=0,key;
+ scanf("%d",&n);
+ int a[n];
+ printf("/////////////////////////////\n");
+ for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+
+ printf("////////////////////////////\n");
+printf("enter key value \n");
+scanf("%d \n",&key);
+printf("////////////////////////////\n");
+
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+  printf("////////////////////////////\n");
+  
+ for(i=0;i<n;i++)
+ if(a[i]<key)
+ {
+     printf("%d \n",a[i]);
+ }
+ 
+ return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+4.)
+
+#include<stdio.h>
+int main()
+{
+ int n,i,acount=0,bcount=0,key;
+ scanf("%d",&n);
+ int a[n];
+ printf("/////////////////////////////\n");
+ for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+
+ printf("////////////////////////////\n");
+
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+ 
+  printf("////////////////////////////\n");
+  
+ for(i=0;i<n;i++)
+ {
+     
+     if(a[i]==a[i+1])
+     {
+         printf("%d",a[i]);
+        
+     }
+ }
+ 
+ return 0;
+}
+-------------------------------------------------------------------------------
+5.) found element;;;;;;;;
+
+#include<stdio.h>
+int main()
+{
+ int n,i,acount=0,bcount=0,key,flag=0;
+ scanf("%d",&n);
+ int a[n];
+ printf("/////////////////////////////\n");
+ for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+
+ printf("////////////////////////////\n");
+
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+ 
+  printf("////////////////////////////\n");
+  printf("enter key value \n");
+scanf("%d",&key);
+printf("////////////////////////////\n");
+  
+ for(i=0;i<n;i++)
+ {
+     
+     if(a[i]==key)
+     {
+         printf("%d /n element found",a[i]);
+         printf("a[%d]",i);
+         flag++;
+     }
+ }
+if(flag==0)
+printf("%d element not found ",-1);
+ 
+ return 0;
+}
+----------------------------------------------------------------------------------
+6.) 0 and 1 swap:::::::::::::::::::::::::
+
+#include<stdio.h>
+int main()
+{
+ int n,i,acount=0,bcount=0,key,flag=0;
+ scanf("%d",&n);
+ int a[n];
+ printf("/////////////////////////////\n");
+ for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+
+ printf("////////////////////////////\n");
+
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+ 
+  printf("////////////////////////////\n");
+  
+ for(i=0;i<n;i++)
+ {
+     
+     if(a[i]==1)
+     {
+         acount++;
+     }
+     else if(a[i]==0)
+     {
+         bcount++;
+     }
+ }
+ 
+ for(i=0;i<acount;i++)
+ {
+     printf("%d",a[i]=1);
+     
+ }
+ for(i=0;i<bcount;i++)
+ {
+     printf("%d",a[i]=0);
+     
+ }
+//printf("%d",a[i]);
+ 
+ return 0;
+}
+---------------------------------------------------------------------------------------------------------------
+7.) sum::::::::::::
+
+
+#include<stdio.h>
+int main()
+{
+ int n,i,acount=0,bcount=0,key,flag=0;
+ scanf("%d",&n);
+ int a[n];
+ printf("/////////////////////////////\n");
+ for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+
+ printf("////////////////////////////\n");
+
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+ 
+  printf("////////////////////////////\n");
+  
+ for(i=0;i<n-1;i++)
+ {
+     for(i=i+1;i<n;i++)
+     {
+         for(int j=i+1;j<n;j++)
+         acount+=a[j];
+
+     }
+     a[i]=acount;
+     acount=0;
+ }
+ for(i=0;i<n;i++)
+ printf("%d",a[i]);
+ 
+ return 0;
+}
+-----------------------------------------------------------------------------------------------------------------
+8.) array reverse :::::::::::::::::::::::::::::
+
+#include<stdio.h>
+int main()
+{
+ int a[10],n,i;
+ scanf("%d",&n);
+ printf("/////////////////////////////\n");
+ for(i=0;i<n;i++)
+ {
+    scanf("%d",&a[i]);
+ }
+ printf("////////////////////////////\n");
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+  printf("////////////////////////////\n");
+ for(i=n-1;i>=0;i--)
+ printf("%d \n",a[i]);
+ return 0;
+}
+ -----------------------------------------------------------------
+9.) insert::::::::
+
+#include<stdio.h>
+int main()
+{
+ int a[100],n,i,key,pos;
+ scanf("%d",&n);
+ printf("/////////////////////////////\n");
+ for(i=0;i<n;i++)
+ {
+    scanf("%d",&a[i]);
+ }
+ printf("////////////////////////////\n");
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+  printf("////////////////////////////\n");
+  printf("enter key and position\n");
+  scanf("%d \n %d",&key,&pos);
+ printf("////////////////////////////\n");
+ for(i=n;i>=pos;i--)
+ {
+     for(int j=i+1;j>i;j--)
+     {
+         a[j]=a[i];
+     }
+ }
+ a[pos]=key; 
+ 
+ for(i=0;i<=n;i++)
+ printf("%d",a[i]);
+ return 0;
+}
+
+day 2-------------------------------------------------
+1.) 0 ,1 and2 swap;
+
+#include<stdio.h>
+int main()
+{
+ int n,i,acount=0,bcount=0,key,flag=0,ccount=0;
+ scanf("%d",&n);
+ int a[n];
+ printf("/////////////////////////////\n");
+ for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+
+ printf("////////////////////////////\n");
+
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+ 
+  printf("////////////////////////////\n");
+  
+ for(i=0;i<n;i++)
+ {
+     
+     if(a[i]==1)
+     {
+         acount++;
+     }
+     else if(a[i]==0)
+     {
+         bcount++;
+     }
+     else if(a[i]==2)
+     {
+      ccount++;
+     }
+ }
+ 
+ 
+ for(i=0;i<bcount;i++)
+ {
+     printf("%d",a[i]=0);
+     
+ }
+ for(i=0;i<acount;i++)
+ {
+     printf("%d",a[i]=1);
+     
+ }
+ for(i=0;i<ccount;i++)
+ {
+     printf("%d",a[i]=2);
+     
+ }
+//printf("%d",a[i]);
+ 
+ return 0;
+}
+--------------------------------------------------------------------------------
+leader::::::::::::::::::::::::::::::
+
+#include<stdio.h>
+  int main()
+  {
+
+int n,i,acount=0,bcount=0,key,flag=0,ccount=0,j;
+ scanf("%d",&n);
+ int a[n];
+ printf("/////////////////////////////\n");
+ for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+
+ printf("////////////////////////////\n");
+
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+ 
+  printf("////////////////////////////\n");
+  
+ for(i=0;i<n;i++)
+ {
+     int flag=0;
+     for(j=i+1;j<n;j++)
+     {
+         if(a[i]<a[j])
+         {
+             flag=1;
+         }
+         
+     }
+     if(flag!=1)
+         {
+             printf("%d",a[i]);
+         }
+ }
+          return 0;
+  }
+
+                                   ================================================================================
+
+swap adjecent::::::::::::::::::::
+
+#include<stdio.h>
+  int main()
+  {
+
+int n,i,acount=0,bcount=0,key,flag=0,ccount=0,j,temp;
+ scanf("%d",&n);
+ int a[n];
+ printf("/////////////////////////////\n");
+ for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+
+ printf("////////////////////////////\n");
+
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+ 
+  printf("////////////////////////////\n");
+  
+ for(i=0;i<n;i+=2)
+{
+    temp=a[i];
+    a[i]=a[i+1];
+    a[i+1]=temp;
+}
+     for(i=0;i<n;i++)
+ printf("%d \n",a[i]);
+ return 0;
+  }
+
+remove duplicate::::::::::::::::::
+
+
+#include<stdio.h>
+  int main()
+  {
+
+int n,i,acount=0,bcount=0,key,flag=0,ccount=0,j,temp=0,k;
+ scanf("%d",&n);
+ int a[n];
+ printf("/////////////////////////////\n");
+ for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+
+ printf("////////////////////////////\n");
+
+ for(i=0;i<n;i++)
+ printf("%d\n",a[i]);
+ 
+  printf("////////////////////////////\n");
+  
+ for(i=0;i<n;i++)
+{
+    for(j=i+1;j<n;j++)
+    {
+        if(a[i]==a[j])
+        {
+            flag++;
+            for(k=j;k<n;k++)
+            {
+        a[k]=a[k+1];
+        
+            }
+        }
+    }
+}
+for(i=0;i<=n-flag;i++)
+ printf("%d\n",a[i]);
+ return 0;
+}
+
+------------------------STRING-------------------------
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    
+        char str[40];
+        int index,alpha=0,spcl=0,num=0;
+        fgets(str,sizeof(str),stdin);
+        puts(str);
+        while(str[index]!='\0')
+        {
+            if((str[index]>='a'&& str[index]<='z')||(str[index]>='A'&& str[index]<='Z'))
+            {
+            alpha++;
+            }
+            else if(str[index]>='0'&&str[index]<='9')
+            {
+                num++;
+            }
+            else
+            spcl++;
+            index++;
+            }
+            printf("%d alpha \n %d num \n %d spcl \n",alpha,num,spcl-1);
+    return 0;
+}
+ 2.)VOWEL::::::::::::::::
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    
+        char str[40];
+        int index,alpha=0,spcl=0,num=0,vo=0,con=0;
+        fgets(str,sizeof(str),stdin);
+        puts(str);
+        while(str[index]!='\0')
+        {
+            if(str[index]=='a'||str[index]=='A'||str[index]=='e'||str[index]=='E'||str[index]=='i'||str[index]=='I'||str[index]=='o'||str[index]=='O'||str[index]=='u'||str[index]=='U')
+            {
+            vo++;
+            }
+            else
+            con++;
+            index++;
+            }
+            printf("%d - vowel \n%d - con \n",vo,con-1);
+    return 0;
+}
+
+
+TO UPPER:::::::::::::::::::;;;;;;
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    
+        char str[40];
+        int index,alpha=0,spcl=0,num=0,vo=0,con=0;
+        fgets(str,sizeof(str),stdin);
+        puts(str);
+        while(str[index]!='\0')
+        {
+        if(str[index]>='a'&&str[index]<='z')
+            {
+            str[index]=str[index]-32;
+            }
+            printf("%c",str[index]);
+            index++;
+            }
+    return 0;
+}
+
+TO lower::::::::::::::::::::;
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    
+        char str[40];
+        int index,alpha=0,spcl=0,num=0,vo=0,con=0;
+        fgets(str,sizeof(str),stdin);
+        puts(str);
+        while(str[index]!='\0')
+        {
+        if(str[index]>='A'&&str[index]<='Z')
+            {
+            str[index]=str[index]+32;
+            }
+            printf("%c",str[index]);
+            index++;
+            }
+    return 0;
+}
+
+TOGGLE::::::::::::::::::::::
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    
+        char str[40];
+        int index,alpha=0,spcl=0,num=0,vo=0,con=0;
+        fgets(str,sizeof(str),stdin);
+        puts(str);
+        while(str[index]!='\0')
+        {
+        if(str[index]>='a'&&str[index]<='z')
+            {
+            str[index]=str[index]-32;
+            printf("%c",str[index]);
+            
+            }
+            else if(str[index]>='A'&&str[index]<='Z')
+            {
+                
+                str[index]=str[index]+32;
+               printf("%c",str[index]);
+             
+            }
+            index++;
+        }
+            
+    return 0;
+}
+ WORD IN STRING :::::::::::::
+#include<stdio.h>
+int main() {
+    
+        char str[40];
+        int index=0,alpha=0,spcl=0,num=0,vo=0,con=0;
+        fgets(str,sizeof(str),stdin);
+        puts(str);
+        while(str[index]!='\0')
+        {
+        if(str[index]==' '||str[index]=='\t'|| str[index]=='\n')
+        {
+            con++;
+            index++;
+        }
+        printf("%d",con);
+        }
+        return 0;
+        }
