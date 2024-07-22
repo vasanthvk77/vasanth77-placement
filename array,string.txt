@@ -644,6 +644,86 @@ int main() {
     return 0;
 }
 
+
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct Node
+ { int data;
+     struct Node*next;
+ }node;
+ node*newnode,*tptr,*start=NULL,*shadow;
+ 
+ void insert(int num,int pos)
+ {
+     newnode=(node *)malloc(sizeof(node));
+     newnode->data=num;
+    newnode->next=NULL;
+    for(tptr=start;tptr;shadow=tptr,tptr=tptr->next);
+    {
+        
+        if(start==NULL)
+        {
+            newnode->next=start;
+            start=newnode;
+        }
+        else
+        {
+          //for(tptr=start;tptr;shadow=tptr,tptr=tptr->next)
+            //{
+              // if(shadow->data==pos)
+            //{
+            newnode->next=shadow->next;
+            shadow->next=newnode;
+           // break;
+            }
+            
+            }
+        }
+    
+void position(int num,int pos)
+{
+    newnode=(node *)malloc(sizeof(node));
+     newnode->data=num;
+    newnode->next=NULL;
+    
+    for(tptr=start;tptr;shadow=tptr,tptr=tptr->next)
+    {
+        if(shadow->data==pos)
+        {
+            newnode->next=shadow->next;
+            shadow->next=newnode;
+            break;
+        }
+    }
+}
+ void display()
+ {
+      for(tptr=start;tptr;tptr=tptr->next)
+      printf("%d->",tptr->data);
+ }
+ int main()
+ { 
+     char str;
+     int num,n=3,i,pos;
+     for(i=1;i<=n;i++)
+     {
+         scanf("%d",&num);
+         insert(num,pos);
+     }
+     display();
+     printf("\nenter value for inserting\n");
+     scanf("%d",&num);
+     printf("where you want to insert\n");
+     scanf("%d",&pos);
+     printf("before %d or after %d\n",pos,pos);
+     scanf("%s",&str);
+     printf("insertion is done,and show your result in below\n");
+     position(num,pos);
+     display();
+     return 0;
+ }
+
 STRING CHAR IN REVERSE::::::::::::::::
 
 // Online C compiler to run C program online
