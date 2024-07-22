@@ -665,3 +665,42 @@ int main() {
      
     return 0;
 }
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct Node
+ { int data;
+     struct Node*next;
+ }node;
+ node*newnode,*tptr,*start=NULL,*shadow;
+ void insert(int num)
+ {
+     newnode=(node *)malloc(sizeof(node));
+     newnode->data=num;
+    newnode->next=NULL;
+    for(tptr=start;tptr;shadow=tptr,tptr=tptr->next);
+    {
+        if(start==NULL)
+        {
+            newnode->next=start;
+            start=newnode;
+        }
+        else
+        {
+            newnode->next=shadow->next;
+            shadow->next=newnode;
+        }
+    }
+ }
+ void display()
+ {
+      for(tptr=start;tptr;tptr=tptr->next)
+      printf("%d-->",tptr->data);
+ }
+ int main()
+ {
+     scannf("%d",&num);
+     insert(5);
+     display();
+     return 0;
+ }
