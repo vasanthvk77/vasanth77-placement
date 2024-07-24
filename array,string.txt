@@ -786,11 +786,11 @@ typedef struct Node
  }
 
 
-graph:::::
-
+graph:::
 // Online C compiler to run C program online
 #include <stdio.h>
 #include<stdlib.h>
+#define MAX(a,b) (a)>(b)?(a):(b)
 typedef struct node
 {
     int data;
@@ -847,9 +847,32 @@ void displaypostorder(NODE *node)
 }
 }
 
+int height(NODE *node)
+{
+    if(node==NULL)
+    return -1;
+    else
+    return MAX(height(node->left),height(node->right))+1;
+}
+int min(NODE *node)
+{
+    while(node->left!=NULL)
+    {
+        node=node->left;
+    }
+    return node->data;
+}
+
+int max(NODE *node)
+{
+    while(node->right!=NULL)
+    {
+        node=node->right;
+    }
+    return node->data;
+}
+
 int main() {
-    
-   
    root=insert(root,9);
     insert(root,7);
     insert(root,14);
@@ -865,6 +888,13 @@ int main() {
      printf("\n");
     printf("postorder::");
      displaypostorder(root);
+     printf("\n");
+    printf("height::%d",height(root));
+    printf("\n");
+    printf("min::%d",min(root));
+    printf("\n");
+    printf("max::%d",max(root));
+    
 
     return 0;
 }
