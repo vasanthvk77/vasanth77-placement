@@ -784,3 +784,87 @@ typedef struct Node
      display();
      return 0;
  }
+
+
+graph:::::
+
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<stdlib.h>
+typedef struct node
+{
+    int data;
+    struct node *left ,*right;
+}NODE;
+ NODE *newnode,*root;
+
+NODE* CreateNode(int num)
+{
+    newnode=(NODE*)malloc(sizeof(NODE));
+    newnode->data=num;
+    newnode->left=NULL;
+    newnode->right=NULL;
+    return newnode;
+}
+NODE* insert(NODE* node,int num)
+{
+    if(node==NULL)
+   return CreateNode(num);
+    
+   else if(num<node->data)
+    node->left=insert(node->left,num);
+    
+    else
+    node->right=insert(node->right,num);
+    return node;
+}
+
+void displaypreorder(NODE *node)
+{ 
+    if(node!=NULL){
+    printf("%d ",node->data);
+    displaypreorder(node->left);
+    displaypreorder(node->right);
+}
+}
+
+void displayinorder(NODE *node)
+{ 
+    if(node!=NULL){
+    displaypreorder(node->left);
+     printf("%d ",node->data);
+    displaypreorder(node->right);
+}
+}
+
+void displaypostorder(NODE *node)
+{ 
+    if(node!=NULL){
+    displaypreorder(node->left);
+    displaypreorder(node->right);
+         printf("%d",node->data);
+
+}
+}
+
+int main() {
+    
+   
+   root=insert(root,9);
+    insert(root,7);
+    insert(root,14);
+    insert(root,6);
+    insert(root,8);
+    insert(root,11);
+    insert(root,16);
+    printf("preorder ::");
+    displaypreorder(root);
+    printf("\n");
+    printf("inorder  ::");
+     displayinorder(root);
+     printf("\n");
+    printf("postorder::");
+     displaypostorder(root);
+
+    return 0;
+}
